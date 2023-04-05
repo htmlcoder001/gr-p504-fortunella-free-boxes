@@ -17,9 +17,9 @@
   <link href="css/bootstrap.css" type="text/css" rel="stylesheet">
   <link href="css/translator.css" id="SL_Style" type="text/css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/brandico2.css">
-  <link href="css/css1.css" rel="stylesheet">
-  <link href="css/orderForm.css" rel="stylesheet">
-  <link href="css/form.css" rel="stylesheet">
+  <link type="text/css" href="css/css1.css" rel="stylesheet">
+  <link type="text/css" href="css/orderForm.css" rel="stylesheet">
+  <link type="text/css" href="css/form.css" rel="stylesheet">
 
   <link href="css/aos.css" rel="stylesheet">
   <link href="css/korobki.css" rel="stylesheet">
@@ -304,63 +304,247 @@
       max-width: 50px;
     }
   </style>
+  
+  <style>
+    .page-header {
+      padding-bottom: 0;
+      margin: 0;
+      width: 100%;
+      border: none;
+    }
+    .page-header__top {
+      height: 100px;
+      background: #e10005;
+    }
+    .header-wrapper {
+      max-width: 980px;
+      align-self: center;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 95px 1fr;
+      justify-content: space-between;
+      height: 100%;
+      align-items: center;
+    }
+    .header-wrapper__menu {
+      width: 25px;
+      height: 21px;
+      background-image: url(images/icon-menu.png);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      -webkit-transition: all .3s;
+      -moz-transition: all .3s;
+      -ms-transition: all .3s;
+      -o-transition: all .3s;
+      transition: all .3s;
+    }
+    .header-wrapper__menu:hover {
+      opacity: 0.85;
+    }
+    .header-wrapper__logo {
+      width: 95px;
+      height: auto;
+    }
+    .header-wrapper__actions {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 32px;
+    }
+    .header-actions__social {
+      display: flex;
+      align-items: baseline;
+      width: 100%;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+    .header-social__item {
+      display: block;
+      height: 16px;
+      width: 16px;
+      background-repeat: no-repeat;
+      -webkit-background-size: contain;
+      background-size: contain;
+      background-position: center;
+      -webkit-transition: all .3s;
+      -moz-transition: all .3s;
+      -ms-transition: all .3s;
+      -o-transition: all .3s;
+      transition: all .3s;
+    }
+    .header-social__item:hover {
+      opacity: 0.85;
+    }
+    .--social-fb {
+      background-image: url(images/icon-facebook.png);
+    }
+    .--social-tw {
+      background-image: url(images/icon-twitter.png);
+    }
+    .--social-ig {
+      background-image: url(images/icon-instagram.png);
+    }
+    .--social-in {
+      background-image: url(images/icon-linkedin.png);
+      height: 18px;
+    }
+    .--social-yt {
+      background-image: url(images/icon-youtube.png);
+    }
+    .--social-tt {
+      background-image: url(images/icon-tiktok.svg);
+    }
+    .header-actions__search {
+      flex: 18px;
+      max-width: 16px;
+      display: block;
+      width: 16px;
+      height: 16px;
+      background-image: url(images/icon-search.png);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      -webkit-transition: all .3s;
+      -moz-transition: all .3s;
+      -ms-transition: all .3s;
+      -o-transition: all .3s;
+      transition: all .3s;
+    }
+    .header-actions__search:hover {
+      opacity: 0.85;
+    }
+    .page-header__bottom {
+      height: 35px;
+      background: #2d2d2e;
+    }
+    .header-nav {
+      max-width: 980px;
+      align-self: center;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+    }
+    .header-nav__item {
+      display: flex;
+      height: 100%;
+      align-items: center;
+      letter-spacing: .68px;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 12px;
+      color: #fff;
+      -webkit-transition: all .3s;
+      -moz-transition: all .3s;
+      -ms-transition: all .3s;
+      -o-transition: all .3s;
+      transition: all .3s;
+    }
+    .header-nav__item:hover {
+      color: #999;
+      text-decoration: none;
+    }
+    
+    @media (max-width: 980px) {
+      .page-header__bottom,
+      .header-wrapper {
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+      .header-nav,
+      .header-wrapper {
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .header-nav {
+        justify-content: flex-start;
+        gap: 16px;
+        white-space: nowrap;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+      }
+      
+      .--mobile-no-margin {
+        margin: 0;
+      }
+    }
+
+    @media (max-width: 575px) {
+      .header-actions__social {
+        display: none;
+      }
+      .page-header__bottom {
+        height: 30px;
+      }
+      .header-nav__item {
+        font-size: 11px;
+      }
+      .header-wrapper__logo {
+        height: 50px;
+        width: auto
+      }
+      .header-wrapper {
+        grid-template-columns: 1fr auto 1fr;
+      }
+      .page-header__top {
+        height: 70px;
+      }
+      .content-box {
+        padding-top: 16px!important;
+      }
+    }
+  </style>
 </head>
 
 <body data-gr-c-s-loaded="true" cz-shortcut-listen="true" data-aos-easing="ease" data-aos-duration="500"
   data-aos-delay="20">
 
-  <div class="headers" id="menuDedicato">
-    <div class="small-12 columns">
-      <div id="site-menu" class="top-bar">
-        <div class="columns">
-          <a href="#toform"><button id="mainMenuBtn" class="menu-icon"></button></a>
-          <a href="#toform" class="menuTitle">
-            <img src="images/RaiNewsBarra-logo.png" alt="">
-          </a>
+<header class="page-header">
+  <div class="page-header__top">
+    <div class="header-wrapper">
+      <a href="#toform" class="header-wrapper__menu"></a>
+      <img src="images/news_logo.png" alt="" class="header-wrapper__logo">
+      <div class="header-wrapper__actions">
+        <div class="header-actions__social">
+          <a href="#toform" class="header-social__item --social-fb"></a>
+          <a href="#toform" class="header-social__item --social-tw"></a>
+          <a href="#toform" class="header-social__item --social-ig"></a>
+          <a href="#toform" class="header-social__item --social-in"></a>
+          <a href="#toform" class="header-social__item --social-yt"></a>
+          <a href="#toform" class="header-social__item --social-tt"></a>
         </div>
-        <div class="columns">
-          <div class="top-bar-right">
-            <ul class="dropdown menu">
-              <li id="cerca-barra">
-                <div class="box">
-
-                  <!-- <form name="qtv" method="get" action="index.php"> -->
-
-                  <div class="container-2" style="height: 40px;">
-                    <a href="#toform">
-                      <span class="icon">
-                        <!-- <button type="submit" class="enable-search"> -->
-                        <img src="images/ricerca-logo-barra.svg" alt="Cerca"
-                          style="display: flex;align-items: center;justify-content: center;" onclick="return false;">
-                        <!-- </button> -->
-                      </span>
-                    </a>
-
-                  </div>
-
-                </div>
-              </li>
-              <a href="#toform">
-                <li id="barraRaiBtn" role="menuitem" class="">
-                  <button id="barraRaiMenuIcon" class="menu-icon"></button>
-
-                  <img src="images/logoMenu.png">
-                </li>
-              </a>
-            </ul>
-          </div>
-        </div>
+        <a href="#toform" class="header-actions__search"></a>
       </div>
     </div>
   </div>
+  <div class="page-header__bottom">
+    <nav class="header-nav">
+      <a href="#toform" class="header-nav__item">ΠΟΛΙΤΙΚΗ</a>
+      <a href="#toform" class="header-nav__item">ΚΟΙΝΩΝΙΑ</a>
+      <a href="#toform" class="header-nav__item">ΟΙΚΟΝΟΜΙΑ</a>
+      <a href="#toform" class="header-nav__item">ΠΟΛΙΤΙΣΜΟΣ</a>
+      <a href="#toform" class="header-nav__item">ΚΟΣΜΟΣ</a>
+      <a href="#toform" class="header-nav__item">ΚΑΙΡΟΣ</a>
+      <a href="#toform" class="header-nav__item">VIDEOS</a>
+      <a href="#toform" class="header-nav__item">THE MAGAZINE</a>
+      <a href="#toform" class="header-nav__item">ΠΡΩΤΟΣΕΛΙΔΑ</a>
+      <a href="#toform" class="header-nav__item">ΕΙΔΗΣΕΙΣ</a>
+    </nav>
+  </div>
+</header>
+  
 
   <section class="content-box" style="padding-top:40px;">
     <div class="container content">
-      <div class="row d-flex" style="flex-direction: row-reverse;">
+      <div class="--mobile-no-margin row d-flex" style="flex-direction: row-reverse;">
         <div class="sub col-md-4">
           <a href="#toform"><img src="images/subtitle_gr.jpg"></a>
         </div>
-        <div class="col-md-12 col-lg-7">
+        <div class="col-md-7 col-lg-7">
           <h1 class="article-header">Σταγόνες για την απώλεια του βάρους Fortunella</h1>
           <p style="padding-right: 20px; padding-left: 20px;max-width:600px;margin-left:0">Έχετε προσπαθήσει να αδυνατίσετε με διάφορα προϊόντα και δεν μπορείτε να πετύχετε το επιθυμητό αποτέλεσμα;</p>
           <!-- <img src="img/portais.png" style="width: 100%" class="img-responsive"> -->
@@ -583,7 +767,6 @@
                           <h3>Το μόνο που έχετε να κάνετε είναι να εισάγετε το όνομα και τον αριθμό του τηλεφώνου σας.<br>Βιαστείτε! Σας απομένει χρόνος:
                             <br><span class="time_remains" id="min">10</span> : <span class="time_remains" id="sec">00</span>
                           </h3>
-                          <link rel="stylesheet" href="form/form.css">
                   
                           <div id="form">
                     
@@ -1546,7 +1729,7 @@
       border-right-style: solid;
       border-bottom-style: solid;
       border-left-style: solid;
-      background: #dc513a;
+      background: #e10005;
       text-decoration: none;
       padding: 16px 20px;
       border-color: rgb(255, 255, 255);
@@ -1573,21 +1756,33 @@
       padding-left: 11px;
       font-size: 20px;
     }
+    
+    .--hidden-msg {
+      opacity: 0;
+      pointer-events: none;
+    }
   </style>
   <div class="wisepops-root">
     <div class="wisepops-popup Popup__WisepopPopinStyle-gGQlXS cqRQEn" id="wisepop-156821">
-      <div class="PopupCloseButton__InnerPopupCloseButton-hijyvD wisepops-close fyqUCv"
+      <a href="#toform" class="PopupCloseButton__InnerPopupCloseButton-hijyvD wisepops-close fyqUCv"
         style="right: 1px; top: 1px; width: 30px; height: 30px; background-color: rgba(0, 0, 0, 0);">
         <svg width="20" height="20" viewBox="0 0 20 20">
           <g stroke="#FFFFFF" stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="round">
             <path d="M5 15L15 5M5 5l10 10" />
           </g>
         </svg>
-      </div>
+      </a>
+      <style>
+        @media (max-width: 575px) {
+          .--mobile-none {
+            display: none!important;
+          }
+        }
+      </style>
       <div class="Popup__WisepopScrollable-djexpe fkNnGr">
         <div class="wisepops-content Popup__WisepopContent-hjTykS boVWwO" style="padding:0px 20px;">
           <div class="VideoStopper__Container-ewFByk hCwzes">
-            <div class="BlocksContainer-cikfnY wisepops-column iELQYj" size="23" style="max-width:20%;">
+            <div class="BlocksContainer-cikfnY wisepops-column iELQYj --mobile-none" size="23" style="max-width:20%;">
               <div class="ColumnOfBlocksReadOnly__BackgroundImage-grZHiT iLzdUP"></div>
               <div class="wisepops-blocks-wrapper">
                 <div class="BlockReadOnly__BlockContainerReadOnly-gwKWaf kfTgQJ">
@@ -1596,7 +1791,7 @@
                     <div class="ImagePopupBlockReadOnly__ImageNoLink-cDfEhj VEpXU">
                       <span class="ImagePopupBlockReadOnly__ImagePlacer-kxBUEt euvGbb">
                         <img class="ImagePopupBlockReadOnly__InternalImage-eqFMQF jUBOSE"
-                          src="images/RaiNewsBarra-logo.png" width="110">
+                          src="images/news_logo.png" width="75">
                       </span>
                     </div>
                   </div>
@@ -1681,6 +1876,10 @@
       }
 
       countdown(15);
+      
+      document.getElementById('wisepop-156821').addEventListener('click', () => {
+        document.querySelector('.wisepops-root').classList.add('--hidden-msg');
+      })
     });
   </script>
   <link rel="stylesheet" href="css/ouibounce.css">
@@ -2002,13 +2201,13 @@
     })
   </script>
 
-  <script>
+  <!--<script>
     AOS.init({
       duration: 500,
       delay: 20,
       once: true
     });
-  </script>
+  </script>-->
 
 
 
